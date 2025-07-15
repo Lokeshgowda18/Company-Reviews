@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Company Reviews</h1>
+  </header>
+
+  <main class="container">
+    <!-- Submit Review Section -->
+    <section class="submit-section">
+      <h2>Submit a Review</h2>
+      <form id="reviewForm">
+        <label>Company Name
+          <input type="text" id="companyName" placeholder="Enter company name" required />
+        </label>
+
+        <label>Pros
+          <textarea id="pros" placeholder="Write the pros..." required></textarea>
+        </label>
+
+        <label>Cons
+          <textarea id="cons" placeholder="Write the cons..." required></textarea>
+        </label>
+
+        <label>Rating
+          <div class="stars" id="starRating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+        </label>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
+
+    <!-- View Review Section -->
+    <section class="view-section">
+      <h2>View Company Reviews</h2>
+      <div class="search-box">
+        <input type="text" id="searchCompany" placeholder="Search company reviews" />
+        <button id="searchReview">Search</button>
+      </div>
+      <div id="reviewsDisplay" class="hidden">
+        <div id="companyTitle"></div>
+        <div id="reviewSummary"></div>
+        <div id="reviewsList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
